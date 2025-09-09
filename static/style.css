@@ -1,0 +1,158 @@
+/* static/css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section {
+    grid-column: 1 / -1;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.divider {
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+.upload-area {
+    border: 2px dashed #3498db;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    background-color: #f0f8ff;
+    border-color: #2980b9;
+}
+
+.upload-content p {
+    margin-bottom: 10px;
+}
+
+.upload-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.browse-link {
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.file-support {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.search-box {
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.resume-selector {
+    margin-bottom: 20px;
+}
+
+.resume-selector label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.resume-selector select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.document-viewer {
+    min-height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-document {
+    color: #7f8c8d;
+    text-align: center;
+}
+
+.info-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.info-item label {
+    font-weight: 500;
+    min-width: 150px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}

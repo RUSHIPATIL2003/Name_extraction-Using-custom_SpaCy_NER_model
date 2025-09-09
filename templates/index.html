@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Resume Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HR Resume Management</h1>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <h2>Upload Resume</h2>
+                <p>Upload candidate resumes in PDF, DOC, or DOCX format</p>
+                <div class="divider"></div>
+
+                <div class="upload-area" id="dropZone">
+                    <div class="upload-content">
+                        <p class="upload-icon">📄</p>
+                        <p><strong>Drag and drop your resume here</strong></p>
+                        <p>or <span class="browse-link" id="browseLink">click to browse</span></p>
+                        <p class="file-support">Supports PDF, DOC, DOCX (Max 10MB)</p>
+                    </div>
+                    <input type="file" id="fileInput" accept=".pdf,.doc,.docx" style="display: none;">
+                </div>
+                
+                <div class="selected-file" id="selectedFileContainer" style="display: none;">
+                    <p><strong>Selected file:</strong> <span id="selectedFileName"></span></p>
+                    <button id="submitButton" class="submit-btn">Submit Resume</button>
+                </div>
+                
+                <div id="uploadStatus" class="status-message"></div>
+            </section>
+
+            <section class="resume-library">
+                <h2>Resume Library</h2>
+                <p>View and manage submitted resumes</p>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search resumes...">
+                </div>
+                
+                <div class="resume-selector">
+                    <label for="resumeSelect">Select Resume to View</label>
+                    <select id="resumeSelect">
+                        <option value="">Choose a resume...</option>
+                    </select>
+                </div>
+                
+                <div class="resume-display">
+                    <h3>Display Selected Resume</h3>
+                    <div class="document-viewer" id="documentViewer">
+                        <div class="no-document">
+                            <p>No document selected</p>
+                            <p>Select a resume from the list to view it here</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="candidate-info">
+                <h2>Candidate Information</h2>
+                <p>Select a resume to view candidate information</p>
+                
+                <div class="info-card">
+                    <div class="info-item">
+                        <label>Candidate Name:</label>
+                        <span id="candidateName">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Position:</label>
+                        <span id="candidatePosition">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Original File Name:</label>
+                        <span id="originalFileName">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>File Type:</label>
+                        <span id="fileType">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>File Size:</label>
+                        <span id="fileSize">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Upload Date:</label>
+                        <span id="uploadDate">-</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
